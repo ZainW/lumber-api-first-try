@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170310163205) do
     t.integer  "move_speed"
     t.integer  "turn_rate"
     t.string   "attack_type"
-    t.json     "talents"
+    t.jsonb    "talents"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

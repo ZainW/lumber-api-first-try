@@ -12,7 +12,7 @@ class CreateHeroes < ActiveRecord::Migration[5.0]
       t.integer :move_speed
       t.integer :turn_rate
       t.string :attack_type
-      t.json :talents
+      t.jsonb :talents
 
       t.timestamps
     end
