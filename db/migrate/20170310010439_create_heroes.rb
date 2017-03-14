@@ -6,11 +6,11 @@ class CreateHeroes < ActiveRecord::Migration[5.0]
       t.integer :base_str
       t.integer :base_agi
       t.integer :base_int
-      t.integer :add_str
-      t.integer :add_agi
-      t.integer :add_int
+      t.decimal :add_str
+      t.decimal :add_agi
+      t.decimal :add_int
       t.integer :move_speed
-      t.integer :turn_rate
+      t.decimal :turn_rate
       t.string :attack_type
       t.jsonb :talents
 
