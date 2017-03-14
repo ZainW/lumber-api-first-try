@@ -1,7 +1,7 @@
 FactoryGirl.define do
   damage_types = ["Magical", "Physical", "Magical/Physical"]
   ability_types = ["Active", "Passive"]
-  factory :abilities do
+  factory :ability do
     name { Faker::Hacker.verb }
     damage { "#{Faker::Number.number(3)}/#{Faker::Number.number(3)}/#{Faker::Number.number(3)}/#{Faker::Number.number(3)}" }
     damage_type { damage_types[rand(0..2)]}
