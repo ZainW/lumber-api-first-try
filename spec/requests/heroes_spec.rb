@@ -89,7 +89,7 @@ RSpec.describe 'Heroes API', type: :request do
 
       it 'returns a validation failure message' do
         expect(JSON.parse(response.body)["message"])
-          .to match(/Validation failed: Base str can't be blank, Base agi can't be blank, Base int can't be blank, Add str can't be blank, Add agi can't be blank, Add int can't be blank, Move speed can't be blank, Turn rate can't be blank, Attack type can't be blank, Talents can't be blank/)
+          .to match(/Validation failed: Base str can't be blank, Base agi can't be blank, Base int can't be blank, Add str can't be blank, Add agi can't be blank, Add int can't be blank, Move speed can't be blank, Turn rate can't be blank, Attack type can't be blank/)
       end
     end
   end
