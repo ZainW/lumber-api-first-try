@@ -15,6 +15,7 @@ FactoryGirl.define do
     move_speed { Faker::Number.number(3) }
     turn_rate { Faker::Number.decimal(1.1) }
     attack_type { attack_type[rand(0..1)] }
+    hero_type "Agility"
 
     # talents {
     #   {

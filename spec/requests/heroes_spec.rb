@@ -45,31 +45,11 @@ RSpec.describe 'Heroes API', type: :request do
     end
   end
   describe 'POST /heroes' do
-    # valid_params = {
-    #   name: "Mage",
-    #   base_str: 22,
-    #   base_agi: 22,
-    #   base_int: 15,
-    #   add_str: 1.2,
-    #   add_agi: 2.8,
-    #   add_int: 1.8,
-    #   profile_url: "someurl",
-    #   move_speed: 315,
-    #   attack_type: "Melee",
-    #   turn_rate: 0.6,
-    #   talents: {
-    #     level_10: ["talent 1", "talent 2"]
-    #     }
-    #   }
-      let(:valid_attributes) { { name: "Mage", base_str: 22, base_agi: 22, base_int: 15, add_str: 1.2, add_agi: 2.8, add_int: 1.8, profile_url: "someurl", move_speed: 315, attack_type: "Melee", turn_rate: 0.6,
-      talents: {
-        level_10: ["talent 1", "talent 2"]
-      }
-      } }
+
+    let(:valid_attributes) { { name: "Mage", base_str: 22, base_agi: 22, base_int: 15, add_str: 1.2, add_agi: 2.8, add_int: 1.8, profile_url: "someurl", move_speed: 315, attack_type: "Melee", turn_rate: 0.6,hero_type: "Agility" } }
 
     context 'when the request is valid' do
       before { post '/heroes', params: valid_attributes}
-      # post :create, hero: valid_params
 
       it 'creates a hero' do
         expect(JSON.parse(response.body)["name"]).to eq('Mage')
