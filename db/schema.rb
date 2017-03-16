@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316171115) do
+ActiveRecord::Schema.define(version: 20170316223745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,9 +41,10 @@ ActiveRecord::Schema.define(version: 20170316171115) do
     t.decimal  "turn_rate"
     t.string   "attack_type"
     t.jsonb    "talents"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "hero_type"
+    t.integer  "attack_range"
   end
 
 end

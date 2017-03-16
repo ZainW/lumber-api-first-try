@@ -13,4 +13,5 @@ RSpec.describe Hero, type: :model do
   it { should validate_presence_of(:turn_rate) }
   it { should validate_presence_of(:attack_type) }
   it { should validate_presence_of(:hero_type) }
+  it { should validate_presence_of(:attack_range) }
 end

@@ -34,7 +34,7 @@ class HeroesController < ApplicationController
 
   def hero_params
     # whitelist params
-    params.permit(:name, :base_str, :base_agi, :base_int, :add_str, :add_agi, :add_int, :move_speed, :turn_rate, :attack_type, :talents, :hero_type)
+    params.permit(:name, :base_str, :base_agi, :base_int, :add_str, :add_agi, :add_int, :move_speed, :turn_rate, :attack_type, :talents, :hero_type, :attack_range)
   end
 
   def set_hero

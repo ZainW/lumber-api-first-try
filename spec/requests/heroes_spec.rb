@@ -46,7 +46,7 @@ RSpec.describe 'Heroes API', type: :request do
   end
   describe 'POST /heroes' do
 
-    let(:valid_attributes) { { name: "Mage", base_str: 22, base_agi: 22, base_int: 15, add_str: 1.2, add_agi: 2.8, add_int: 1.8, profile_url: "someurl", move_speed: 315, attack_type: "Melee", turn_rate: 0.6,hero_type: "Agility" } }
+    let(:valid_attributes) { { name: "Mage", base_str: 22, base_agi: 22, base_int: 15, add_str: 1.2, add_agi: 2.8, add_int: 1.8, profile_url: "someurl", move_speed: 315, attack_type: "Melee", turn_rate: 0.6,hero_type: "Agility", attack_range: 350 } }
 
     context 'when the request is valid' do
       before { post '/heroes', params: valid_attributes}
