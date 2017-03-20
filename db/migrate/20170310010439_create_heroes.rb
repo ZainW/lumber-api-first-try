@@ -13,6 +13,8 @@ class CreateHeroes < ActiveRecord::Migration[5.0]
       t.decimal :turn_rate
       t.string :attack_type
       t.jsonb :talents
+      t.integer :attack_range
+      t.string :hero_type
 
       t.timestamps
     end

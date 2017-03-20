@@ -63,7 +63,7 @@ RSpec.describe 'Abilities API' do
 
   # Test suite for PUT /heroes/:hero_id/abilities
   describe 'POST /heroes/:hero_id/abilities' do
-    let(:valid_attributes) { { name: 'Mana Break', damage: "28/40/52/64%", damage_type: "Physical", mana_cost: "0", cooldown: "0", ability_type: "passive" } }
+    let(:valid_attributes) { { name: 'Mana Break' } }
 
     context 'when request attributes are valid' do
       before { post "/heroes/#{hero_id}/abilities", params: valid_attributes }

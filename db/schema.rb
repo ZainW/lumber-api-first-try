@@ -10,22 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316223745) do
+ActiveRecord::Schema.define(version: 20170310163205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
     t.string   "name"
-    t.string   "damage"
-    t.string   "damage_type"
-    t.string   "mana_cost"
-    t.string   "cooldown"
-    t.string   "ability_type"
     t.jsonb    "more"
     t.integer  "hero_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "heroes", force: :cascade do |t|
@@ -41,10 +36,10 @@ ActiveRecord::Schema.define(version: 20170316223745) do
     t.decimal  "turn_rate"
     t.string   "attack_type"
     t.jsonb    "talents"
+    t.integer  "attack_range"
+    t.string   "hero_type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "hero_type"
-    t.integer  "attack_range"
   end
 
 end
