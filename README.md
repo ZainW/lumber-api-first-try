@@ -38,3 +38,8 @@ To run tests run ```rspec ```
 If you would liek to contribute to the project, take into consideration that I am very new at this so be patient with me....
 
 Also won't accept pull requests that don't have an appropriate test or modification to the existing tests!
+
+
+#This is a project that is going through heavey changes and rapid developement, this is not ready for other to use at this point!
+
+if you have any questions join the Development Discord at https://discord.gg/dCXxbVh
