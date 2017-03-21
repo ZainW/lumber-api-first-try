@@ -4,7 +4,7 @@ RSpec.describe 'Abilities API' do
   # Initialize the test data
   let!(:hero) { create(:hero) }
   let!(:abilities) { create_list(:ability, 20, hero_id: hero.id) }
-  let(:hero_id) { hero.id }
+  let(:hero_id) { hero.name }
   let(:id) { abilities.first.id }
 
   # Test suite for GET /heroes/:hero_id/abilities

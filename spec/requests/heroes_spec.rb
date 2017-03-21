@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Heroes API', type: :request do
 
   let!(:heroes) { create_list(:hero, 10) }
-  let(:hero_id) { heroes.first.id }
+  let(:hero_id) { heroes.first.name }
 
   describe 'GET /heroes' do
     before { get '/heroes' }
@@ -24,7 +24,7 @@ RSpec.describe 'Heroes API', type: :request do
     context 'when the record exists' do
       it 'returns the hero' do
         expect(json).not_to be_empty
-        expect(json['id']).to eq(hero_id)
+        expect(json['name']).to eq(hero_id)
       end
 
       it 'returns status code 200' do
@@ -33,14 +33,14 @@ RSpec.describe 'Heroes API', type: :request do
     end
 
     context 'when the record does not exist' do
-      let(:hero_id) { 10000 }
+      let(:hero_id) { "Anti-Mago" }
 
       it 'returns status code 404' do
         expect(response).to have_http_status(404)
       end
 
       it 'returns a not found message' do
-        expect(JSON.parse(response.body)["message"]).to match(/Couldn't find Hero with 'id'=10000/)
+        expect(JSON.parse(response.body)["message"]).to match(/Couldn't find Hero/)
       end
     end
   end

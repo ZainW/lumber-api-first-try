@@ -38,7 +38,7 @@ class HeroesController < ApplicationController
   end
 
   def set_hero
-    @hero = Hero.find(params[:id])
+    @hero = Hero.find_by!(name: params[:name])
   end
 end
 

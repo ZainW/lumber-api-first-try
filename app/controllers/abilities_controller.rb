@@ -37,7 +37,7 @@ class AbilitiesController < ApplicationController
   end
 
   def set_hero
-    @hero = Hero.find(params[:hero_id])
+    @hero = Hero.find_by!(name: params[:hero_name])
   end
 
   def set_hero_ability
