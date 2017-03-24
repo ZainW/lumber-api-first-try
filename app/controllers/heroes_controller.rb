@@ -38,7 +38,8 @@ class HeroesController < ApplicationController
   end
 
   def set_hero
-    @hero = Hero.find_by!(name: params[:name])
+    # @hero = Hero.find_by!(name: params[:name])
+    @hero = Hero.where('name LIKE ?', "%#{params[:name]}%")
   end
 end
 
